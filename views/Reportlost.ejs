@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Lost</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/ReportiostCss.css">
+    <link rel="stylesheet" href="css\main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="/graphics/logo2.svg" alt="Logo">
+            <span class="title">Homantin Plaza</span>
+        </div>
+        <div class="user-info">
+            <span class="user-name" id="user-name">Customer Service System　|</span>
+            <span class="user-name" id="user-name">Harry</span>
+            <button class="logout-button" onclick="location.href='/logout'">LOG OUT</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="/check">MALL NEWS</a>
+            <p></p>
+            <a href="/flight">SHOP INFORMATION</a>
+            <p></p>
+            <a href="#" class="active">CLAIM/REPORT LOST</a>
+            <p></p>
+            <a href="/lostlist" >LOST LIST</a>
+        </div>
+        
+        <div class="main-content">
+            <form action="/reportLost" method="post">
+            <div class="form-container">
+                <img src="/graphics/x.png" class="icon" onclick="location.href='/claim'" alt="YouTube Icon">
+                <h2>Report Lost</h2>
+                <div class="form-group">
+                    <label for="passenger-name">Passenger Name *</label>
+                    <input type="text" id="passenger-name" name="passenger_name">
+                </div>
+                <div class="form-group">
+                    <label for="contact-info">Passenger Contact Information *</label>
+                    <input type="text" id="contact-info" name="contact_info">
+                </div>
+                <div class="form-group">
+                    <label for="item">Item *</label>
+                    <input type="text" id="item" name="item">
+                </div>
+                <div class="form-group">
+                    <label for="lost-time-place">Lost Time and Place *</label>
+                    <input type="text" id="lost-time-place" name="lost_time_place">
+                </div>
+                <div class="form-group">
+                    <label for="item-details">Item Details</label>
+                    <input type="text" id="item-details" placeholder="Option" name="item_details">
+                </div>
+                <button class="upload-button" type="submit">Upload</button>
+            </div>
+            </form>
+        </div>
+    </form>
+    </div>
+
+
+</body>
+</html>

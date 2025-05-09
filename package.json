@@ -1,0 +1,27 @@
+{
+    "name": "flight-api",
+    "version": "1.0.0",
+    "description": "A simple API for managing flight information using Express and MongoDB.",
+    "main": "server.js",
+    "type": "commonjs",
+    "scripts": {
+        "start": "node server"
+    },
+    "author": "Your Name",
+    "dependencies": {
+        "body-parser": "*",
+        "connect-flash": "^0.1.1",
+        "cookie-session": "^2.1.0",
+        "ejs": "*",
+        "express": "*",
+        "express-session": "*",
+        "mongodb": "*",
+        "mongoose": "*",
+        "path": "*"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "keywords": [],
+    "license": "ISC"
+}

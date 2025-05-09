@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/FlightCss.css">
+    <link rel="stylesheet" href="css\main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="/graphics/logo2.svg" alt="Logo">
+            <span class="title">Homantin Plaza</span>
+        </div>
+        <div class="user-info">
+            <span class="user-name" id="user-name">Customer Service System　|</span>
+            <span class="user-name" id="user-name">Harry</span>
+            <button class="logout-button" onclick="location.href='/logout'">LOG OUT</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="/check">MALL NEWS</a>
+            <p></p>
+            <a href="/flight" class="active">SHOP INFORMATION</a>
+            <p></p>
+            <a href="/claim">CLAIM/REPORT LOST</a>
+            <p></p>
+            <a href="/lostlist" >LOST LIST</a>
+        </div>
+        <div class="main-content">
+            <div class="table-container">
+                <form action="/flight" method="post">
+                    <div class="search-container">
+                        <span class="search-title">SHOP INFORMATION</span>
+                        <input type="text" id="search-input" class="search-input" name="search_input" placeholder="Search by flightNo" >
+                        <button class="search-button"  type="submit">ENTER</button>
+
+                </form>
+                <button class="uploadshop-button" onclick="location.href='/logout'">UPLOAD SHOP +</button>
+            </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SHOP NO.</th>
+                            <th>NAME</th> <!-- 元氣/大快活 -->
+                            <th>TYPE</th>  <!-- Food/Shop -->
+                            <th>ADDRESS</th>   <!--鋪位 -->
+                            <th>OPEN TIME</th>
+                            <th>CLOSE TIME</th>
+                            <th>STATUS</th> <!-- 開左鋪未 OPEN/CLOSE-->
+                            <th>PHONE</th> <!-- 2345 6789-->
+                            <th>ACTIONS</th> 
+                            
+                        </tr>
+
+                    </thead>
+                    <tbody id="flight-data">
+                        <!-- Data will be inserted here -->
+                        <% for(let i=0; i < flight_obj_array.length; i++) {%>
+                            <tr>
+                              <td><%= flight_obj_array[i].flightNo %></td>
+                              <td><%= flight_obj_array[i].departure%></td>
+                              <td><%= flight_obj_array[i].landing%></td>
+                              <td><%= flight_obj_array[i].date%></td> 
+                              <td><%= flight_obj_array[i].departureTime%></td> 
+                              <td><%= flight_obj_array[i].landingTime%></td>
+                              <td><span class="<%- flight_obj_array[i].status.replace(' ','').toLowerCase()%>"><%= flight_obj_array[i].status%></span></td>
+                              <td><%= flight_obj_array[i].gate%></td>   
+                              
+                              <td>
+                                <div class="actionContainer">
+                                    <img class="editimg" src="/graphics/edit.png" alt="Edit" onclick="location.href='/logout'">
+                                    <button class="delete-button" onclick="">Delete</button>
+                                </div>
+                                
+                                
+                            </td>
+                            </tr>
+                          <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

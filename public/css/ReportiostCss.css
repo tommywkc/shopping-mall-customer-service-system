@@ -1,0 +1,144 @@
+
+
+
+.form-container {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.messageform-container {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+}
+
+
+.form-container h2 {
+    font-size: 24px;
+    color: #3e3e3e;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.upload-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ce3732;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.upload-button:hover {
+    background-color: #8e0808;
+}
+
+.update-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ce3732;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.update-button:hover {
+    background-color: #8e0808;
+}
+
+
+.finish-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #009581;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.finish-button:hover {
+    background-color: #006a5b;
+}
+
+
+.confirm-button {
+    width: 49%;
+    padding: 10px;
+    background-color: #ad2323;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.confrim-button:hover {
+    background-color: #7b1c1c;
+}
+
+.close-button {
+    width: 49%;
+    padding: 10px;
+    background-color: #7b7b7b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.close-button:hover {
+    background-color: #4f4e4e;
+}
+
+
+.icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}

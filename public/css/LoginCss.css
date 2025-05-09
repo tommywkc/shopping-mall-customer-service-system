@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #e0e0e0;
+    color: #3e3e3e;
+    background-image: 
+        linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+        url('/graphics/background.jpg');
+    background-size: cover; 
+    background-position: center; 
+}
+
+.title h1 {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color:#533b9f;
+    font-size: 30px;
+    margin: 5px;
+    
+}
+
+.logo {
+    margin: 30px 0;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+    max-width: 400px;
+    width: 100%;
+}
+
+
+#account {
+    background-image: url('/graphics/user.png'); /* Replace with your account icon path */
+}
+
+#password {
+    background-image: url('/graphics/lock.png'); /* Replace with your password icon path */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px 20px;
+}
+
+#error-message {
+    height: 0px;
+    color: red;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    background-color: white;
+    color: #8a66ff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #533b9f;
+    color: white;
+}
+
+.login-container a {
+    display: block;
+    margin-top: 10px;
+    color: #3e3e3e;
+    text-decoration: none;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\ClaimCss.css">
+    <link rel="stylesheet" href="css\main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="graphics\logo2.svg" alt="Logo">
+            <span class="title">Homantin Plaza</span>
+        </div>
+        <div class="user-info">
+            <span class="user-name" id="user-name">Customer Service System　|</span>
+            <span class="user-name" id="user-name">Harry</span>
+            <button class="logout-button" onclick="location.href='/logout'">LOG OUT</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="/check">MALL NEWS</a>
+            <p></p>
+            <a href="/flight">SHOP INFORMATION</a>
+            <p></p>
+            <a href="/claim" class="active">CLAIM/REPORT LOST</a>
+            <p></p>
+            <a href="/lostlist" >LOST LIST</a>
+        </div>
+        <div class="main-content">
+            <div class="table-container">
+                
+                <div class="search-container">
+                <form action="/claim" method="post">
+                    <span class="search-title">CLAIM LIST</span>
+                    <input type="text" id="search-input" class="search-input" name="search_input" placeholder="Search by item">
+                    <button class="search-button"  type="submit">ENTER</button>            
+                </form>
+                    <button class="report-button" onclick="location.href='/reportLost'">REPORT LOST +</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>CLAIM ID</th>
+                            <th>ITEM</th>
+                            <th>COLOR</th>
+                            <th>DATE</th>
+                            <th>PICK UP PLACE</th>
+                            <th>STATUS</th>
+                            <th>PICTURE</th>
+                            <th>ACTIONS</th> 
+                        </tr>
+                    </thead>
+                    <tbody id="claim-data">
+                        <!-- Data will be inserted here -->
+                        <% for(let i=0; i < claim_obj_array.length; i++) {%>
+                            <tr>
+                              <td><%= claim_obj_array[i].claimId %></td>
+                              <td><%= claim_obj_array[i].item%></td>
+                              <td><%= claim_obj_array[i].color%></td>
+                              <td><%= claim_obj_array[i].date%></td> 
+                              <td><%= claim_obj_array[i].pickUpPlace%></td> 
+                              <td><span class="<%- claim_obj_array[i].status.replace(' ','').toLowerCase()%>"><%= claim_obj_array[i].status%></span></td>
+                              <td><img src="<%= claim_obj_array[i].picture%>" alt="<%= claim_obj_array[i].item%>" style="width:100px;height:auto;"></td>  
+                              <td>
+                                <div class="actionContainer">
+                                    <img class="editimg" src="/graphics/edit.png" alt="Edit" onclick="location.href='/logout'">
+                                    <button class="delete-button" onclick="">Delete</button>
+                                </div>
+                                
+                                
+                            </td>
+                            </tr>
+                          <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
