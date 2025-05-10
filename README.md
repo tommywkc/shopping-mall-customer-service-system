@@ -127,9 +127,7 @@ ProjectS381F-main/
 - ShopUpload.ejs
 - Update.ejs
 
-==================================================================================
-# Cloud-based server URL:
-https://projects381f-1076834146749.asia-east1.run.app/
+
 
 ==================================================================================
 # Operation guides:
