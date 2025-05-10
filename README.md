@@ -1,16 +1,5 @@
 # Homantin Plaza Customer Service System
 This Website is designed for Customer Service in Homantin Plaza.
-Our Website Link: [Click Me](https://projects381f-1076834146749.asia-east1.run.app/) <br />
-[(Read this file on github for better reading experience.)](https://github.com/Harry5317/ProjectS381F/blob/main/README.md)
-
-==================================================================================
-## Hello World! We are Group 36 !!!
-### Our Developers:
-- __[13017740] Ng Man Hei__
-- __[13077944] Wong Kwok Ching__
-- __[13137889] Lee Chung Ho__
-- __[13138794] Hui Lin Fung__
-- __[13134144] Leung Yu Ching__
 
 ==================================================================================
 ### Front-end Development:
